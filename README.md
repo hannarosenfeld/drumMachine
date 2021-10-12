@@ -1,3 +1,3 @@
 # drumMachine
-Visit the page [here]
+Visit the page [here](https://hannarosenfeld.github.io/drumMachine/)
 ![preview](preview.png)
