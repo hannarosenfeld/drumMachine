@@ -7,11 +7,20 @@ body {
 }
 
 #drum-machine {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 330px;
-    height: 330px;
+
+}
+
+#display {
+    height: 6vh;
+    margin: 0 4em;
+    padding-top: 1em;
+    background-color: lightgray;
+}
+
+#drum-pad-container {
+    width: 390px;
+    height: 380px;
+    padding-top: 10%;
 }
 
 .drum-pad {
@@ -19,6 +28,7 @@ body {
     height: 100px;
     background-color: black;
     color: white;
+    margin-bottom: 0.3em;
 }
 
 
