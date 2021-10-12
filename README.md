@@ -1,3 +1,3 @@
 # drumMachine
 
-!(preview)[preview.png]
+![preview](preview.png)
