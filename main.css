@@ -1,0 +1,32 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: gray;
+}
+
+#drum-machine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+    height: 330px;
+}
+
+.drum-pad {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: white;
+}
+
+
+.playing{
+    background: pink;
+
+}
+
+button:active {
+    background-color: black;
+}

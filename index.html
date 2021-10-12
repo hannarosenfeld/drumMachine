@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>drumMachine</title>
+
+        <script>
+         $(document).ready(function() {          
+             $('.drum-pad').click(
+                 function(){
+                     var drumId = $(this).children().attr('id');
+                     var sound = document.getElementById(drumId);
+                     sound.currentTime = 0;
+                     sound.play();
+                 }
+             );
+
+             $(document).keydown(function(e) {
+                 if(e.which === 81) {
+                     var Q = document.getElementById("Q");
+                     Q.currentTime = 0;
+                     Q.play();
+                     $("#drum-1").css("background-color", "lightsalmon");
+                 }
+                 if(e.which == 87) {
+                     var W = document.getElementById("W");
+                     W.currentTime = 0;
+                     W.play();
+                     $("#drum-2").css("background-color", "pink");
+                 }
+                 if(e.which == 69) {
+                     var E = document.getElementById("E");
+                     E.currentTime = 0;
+                     E.play();
+                     $("#drum-3").css("background-color", "gold");                     
+                 }
+                 if(e.which == 65) {
+                     var A = document.getElementById("A");
+                     A.currentTime = 0;
+                     A.play();
+                     $("#drum-4").css("background-color", "lightgreen");
+                 }
+                 if(e.which == 83) {
+                     var S = document.getElementById("S");
+                     S.currentTime = 0;
+                     S.play();
+                     $("#drum-5").css("background-color", "cyan");
+                 }
+                 if(e.which == 68) {
+                     var D = document.getElementById("D");
+                     D.currentTime = 0;
+                     D.play();
+                     $("#drum-6").css("background-color", "lightpink");
+                 }
+                 if(e.which == 90) {
+                     var Z = document.getElementById("Z");
+                     Z.currentTime = 0;
+                     Z.play();
+                     $("#drum-7").css("background-color", "lavenderblush");
+                 }
+                 if(e.which == 88) {
+                     var X = document.getElementById("X");
+                     X.currentTime = 0;
+                     X.play();
+                     $("#drum-8").css("background-color", "crimson");
+                 }
+                 if(e.which == 67) {
+                     var C = document.getElementById("C");
+                     C.currentTime = 0;
+                     C.play();
+                     $("#drum-9").css("background-color", "coral");
+                 }
+             });
+             $(document).keyup(function() {
+                 $(".drum-pad").css("background-color", "");
+             });
+
+         });
+        </script>
+
+    </head>
+    <body>
+        <div id="drum-machine" class="m-auto">
+            <div id="display"></div>
+            <div id="drum-pad-container" class="container d-flex flex-wrap">
+                <button class="drum-pad" id="drum-1"">
+                    Q
+                    <audio id="Q" class="clip" src="audio/Q.WAV"></audio>
+                </button>
+                <button class="drum-pad" id="drum-2">
+                    W
+                    <audio id="W" class="clip" src="audio/W.WAV"></audio>
+                </button>
+
+                <button class="drum-pad" id="drum-3">
+                    E
+                    <audio id="E" class="clip" src="audio/E.WAV"></audio>
+                </button>
+                <button class="drum-pad" id="drum-4">
+                    A
+                    <audio id="A" class="clip" src="audio/A.WAV"></audio>
+                </button>
+                <button class="drum-pad" id="drum-5">
+                    S
+                    <audio id="S" class="clip" src="audio/S.WAV"></audio>
+                </button>
+                <button class="drum-pad" id="drum-6">
+                    D
+                    <audio id="D" class="clip" src="audio/D.WAV"></audio>
+                </button>
+                <button class="drum-pad" id="drum-7">
+                    Z
+                    <audio id="Z" class="clip" src="audio/Z.WAV"></audio>
+                </button>
+                <button class="drum-pad" id="drum-8">
+                    X
+                    <audio id="X" class="clip" src="audio/X.WAV"></audio>
+                </button>
+                <button class="drum-pad" id="drum-9">
+                    C
+                    <audio id="C" class="clip" src="audio/C.WAV"></audio>
+                </button>
+            </div>
+        </div>
+        </div>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>
