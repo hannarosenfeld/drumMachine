@@ -1,9 +1,15 @@
+@font-face {
+    font-family: 'TR-909';
+    src: url('TR-909.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: gray;
+    font-family: "TR-909", "serif"
 }
 
 #drum-machine {
@@ -13,7 +19,6 @@ body {
 #display {
     height: 6vh;
     margin: 0 4em;
-    padding-top: 1em;
     background-color: lightgray;
 }
 
